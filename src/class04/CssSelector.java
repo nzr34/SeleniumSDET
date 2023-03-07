@@ -1,10 +1,11 @@
-package Class03;
+package class04;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Facebook1 {
+public class CssSelector {
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -12,8 +13,17 @@ public class Facebook1 {
         WebDriver driver=new ChromeDriver();
         driver.get("https://www.facebook.com");
         driver.manage().window().maximize();
-        driver.findElement(By.linkText("Create new account")).click();
-        Thread. sleep(3000);
+        WebElement createNewAccountButton=driver.findElement(By.cssSelector("a[data-testid='open-registration-form-button']"));
+        createNewAccountButton.click();
+        Thread.sleep(3000);
+        WebElement firstName=driver.findElement(By.cssSelector("input[name='firstname']"));
+        firstName.sendKeys("John");
+        WebElement lastName=driver.findElement(By.cssSelector("input[name='lastname']"));
+        lastName.sendKeys("Wick");
+
+
+
+
 
 
 

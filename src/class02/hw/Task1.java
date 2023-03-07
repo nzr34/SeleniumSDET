@@ -1,13 +1,13 @@
-package Class02.HW;
+package class02.hw;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Task1 {
-        /**HW1:
+        /*HW1:
         navigate to
-       https://parabank.parasoft.com/parabank/register.htm;jsessionid=B8DD31FF0AFEDBDF4454B27BBC5C05B0%22
+       //https://parabank.parasoft.com/parabank/register.htm;jsessionid=B8DD31FF0AFEDBDF4454B27BBC5C05B0%22
         fill out the form
         click on register
         close the browser*/

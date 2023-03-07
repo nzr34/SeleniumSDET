@@ -1,9 +1,9 @@
-package Class01;
+package class01;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Navigate {
+public class Maximize {
     public static void main(String[] args) throws InterruptedException {
 
         //connect to web driver
@@ -12,17 +12,11 @@ public class Navigate {
         WebDriver driver=new ChromeDriver();
         //open google.com
         driver.get("https://google.com");
-        //Slow down
-        Thread.sleep(2000);
-        //now navigate
-        driver.navigate().to("https://www.facebook.com");
-        Thread.sleep(2000);
-        driver.navigate().back();
-        Thread.sleep(2000);
-        driver.navigate().forward();
-        Thread.sleep(2000);
-        driver.navigate().refresh();
+        //maximize the page
+        driver.manage().window().maximize();
+        //full screen
+        driver.manage().window().fullscreen();
+        //close
         driver.close();
-
     }
 }

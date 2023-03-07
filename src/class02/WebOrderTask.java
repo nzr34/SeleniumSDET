@@ -1,19 +1,22 @@
-package Class02;
+package class02;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TagName {
+public class WebOrderTask {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");//for Windows "driver/chromedriver.exe"
 
         //Create instance of WebDriver
         WebDriver driver = new ChromeDriver();
-        //Open the website
-        driver.get("https://www.amazon.com/");
-        driver.manage().window().maximize();
-        driver.findElement(By.tagName("a"));
-        System.out.println();
 
-}}
+        //Open the website
+        driver.get("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
+        driver.manage().window().maximize();
+        driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("Tester");
+        driver.findElement(By.name("ctl00$MainContent$password")).sendKeys("test");
+        driver.findElement(By.className("button")).click();
+        driver.quit();
+    }
+}

@@ -1,4 +1,4 @@
-package Class01.HW;
+package class01.hw;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

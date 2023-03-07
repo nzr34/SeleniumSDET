@@ -1,4 +1,4 @@
-package Class02.HW;
+package class02.hw;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
